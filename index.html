@@ -49,12 +49,19 @@
   background-color: #298e46;
   box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
 }
+
+.url {
+  width: 80%;
+}
 </style>
 
 <button class="button-3" role="button" onclick="openWindow()">Open Window</button>
 <hr>
 <button class="button-3" role="button" onclick="copyRealExplorer()">Copy Files App Link</button>
 <button class="button-3" role="button" onclick="copyExplorer()">Copy Web File Explorer Link</button>
+<hr>
+<textarea class="url" rows="2" placeholder="enter url"></textarea>
+<button class="button-3" role="button" onclick="navigateToURL()">Navigate</button>
 
 <script>
 function copyRealExplorer() {
@@ -69,6 +76,10 @@ function copyExplorer() {
 
 function openWindow() {
   window.open("javascript:1");
+}
+
+function navigateToURL() {
+  window.location = document.querySelector("textarea").value;
 }
 </script>
 
